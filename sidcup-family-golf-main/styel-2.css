@@ -1,0 +1,425 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: monospace;
+    color: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* cursior */
+
+.cursior {
+    height: 25px;
+    width: 25px;
+    background-color: #91b508;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.cursior-bluar {
+    height: 500px;
+    width: 500px;
+    background-color: #92b5084f;
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 9;
+}
+
+
+/* NAV */
+
+.nav>img {
+    height: 75px;
+}
+
+.nav {
+    height: 145px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 0px 145px;
+    z-index: 99;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+    font-family: 500;
+    color: #91b508;
+    font-size: 16px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+    text-align: center;
+}
+
+.main .page-1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .page-1 h1 {
+    font-size: 80px;
+    font-weight: 900;
+    position: relative;
+}
+
+.main .page-1 h1::before {
+    content: "EAT . DRINK . PLAY .";
+    position: absolute;
+    top: -6;
+    left: -6;
+    color: #000;
+    -webkit-text-stroke: 5px #95c11e;
+    z-index: -1;
+}
+
+.main .page-1 h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.main .page-1 p {
+    font-size: 15px;
+    font-weight: 500;
+    width: 40%;
+}
+
+.page-2 {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* scrolloar */
+
+.scroller {
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller .scollor-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroller;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller .scollor-in h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-family: 900;
+    font-family: gilroy;
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke: 2px #91b508;
+    transition: all linear .5s;
+}
+
+.scollor-in h4:hover {
+    color: #91b508;
+}
+
+@keyframes scroller {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translatex(-100%);
+    }
+}
+
+.main .about-me {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0px 50px;
+    position: relative;
+    z-index: 99;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main .about-me img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main .about-me .about-in {
+    width: 50%;
+    text-align: center;
+}
+
+.main .about-me .about-in>h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.main .about-me .about-in>p {
+    line-height: 26px;
+    font-weight: 300;
+}
+
+.main .card-container {
+    height: 60vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 130px;
+    position: relative;
+    z-index: 99;
+}
+
+.main .card-container .card-main {
+    height: 85%;
+    width: 22%;
+    border-radius: 10px;
+    margin: 40px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.6s ease;
+    overflow: hidden;
+}
+
+#card-1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card-2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card-3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1
+);
+}
+
+.overly {
+    width: 100%;
+    height: 100%;
+    background-color: #91b508;
+    /* padding: 50px; */
+    padding-top: 100px;
+    text-align: center;
+    /* font-size: 12px; */
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+.card-main:hover .overly {
+    opacity: 1;
+}
+
+.overly h1 {
+    color: #000;
+    font-size: 30px;
+    white-space: nowrap;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.overly p {
+    color: #000;
+    font-size: 12px;
+}
+
+.card-main:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+.page-green {
+    height: 30vh;
+    background: linear-gradient(to left bottom, #2fab35, #8fd427);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-green>h4 {
+    width: 50%;
+    color: #000;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.page-green>img {
+    height: 100%;
+    width: 14%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page-3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    position: relative;
+}
+
+.page-3>p {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 30px;
+    width: 55%;
+    text-align: center;
+}
+
+.page-3>img {
+    position: relative;
+    height: 60px;
+}
+
+.page-3>.colon-image-1 {
+    left: -61%;
+    top: -25%;
+}
+
+.page-3>.colon-image-2 {
+    right: 8%;
+    bottom: -25%;
+}
+
+
+/* PAGE 4 */
+
+.page-4 {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+}
+
+.page-4>.elemant {
+    width: 26%;
+    border-radius: 20px;
+    height: 70%;
+    overflow: hidden;
+    position: relative;
+}
+
+.page-4>.elemant>h2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ace022;
+    transition: all ease 0.5s;
+    font-size: 40px;
+    color: #000;
+    position: absolute;
+    z-index: 10;
+}
+
+.page-4>.elemant>img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.elemant:hover h2 {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+.page-4>h1 {
+    font-size: 85px;
+    position: absolute;
+    top: -18%;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.fotter {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to left bottom, #119f3A, #ace022);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6.5vw;
+    padding: 0px 100px;
+}
+
+.fotter>img {
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+    left: 0%;
+}
+
+.fotter>.fotter-item>img {
+    height: 100px;
+}
+
+.fotter .fotter-item {
+    position: relative;
+    width: fit-content;
+    z-index: 99;
+}
+
+.fotter .fotter-item>h3 {
+    color: #000;
+    margin-bottom: 8px;
+    padding: 8px 0px;
+    font-size: 1.6vw;
+    white-space: nowrap;
+    font-weight: 900;
+}
